@@ -5,6 +5,7 @@ header('Content-Type: text/plain');
 //echo $item1.text();
 
 //echo post
+echo "<script>console.log('This will be logged to the console');</script>";
 $name=$_GET['name'];
 $URL=$_GET['url'];
 $debaterInformation = array(
@@ -17,6 +18,6 @@ echo $debaterInformation;
 //echo 'test';
 exit;
 //json_encode($debaterInformation);
-//echo "<script>console.log('This will be logged to the console');</script>";
+
 
 ?>
