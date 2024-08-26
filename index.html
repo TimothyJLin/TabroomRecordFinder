@@ -1,0 +1,105 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="module" src="script.mjs"></script>
+
+    <script>
+      function ajaxcall() {
+        
+        
+        console.log("ajax call successful"),
+        $.ajax({
+        type: "GET",
+        contentType: 'text/plain',
+        url: "./dummy.php",
+        dataType: "text", 
+        //data: {test: '1'},
+        data: {name: "some variable", school: "some other variable"},
+        success: function(data){
+          window.alert(data);
+          
+          
+          //          window.alert($('debaterInformation').text(data));
+          
+          //          console.log("inside success function");
+          //          console.log(data);
+          //var response = JSON.parse(data); // Parse the received JSON data
+          //var name = response.name;
+          //var school = response.school;
+          //var url = response.url;
+          
+          
+          //          var name = debaterInformation.name;
+          //        var school = debaterInformation.school;
+          //      var url = debaterInformation.url;
+          //    console.log("BREAD SECURED");
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.error("AJAX Error:", textStatus, errorThrown); // Log details for debugging
+        }
+      });      
+      
+      
+    }
+    //function formSubmittedTest() {
+      // console.log("form submitted");
+      //}
+      /**
+      function ajaxcall() {
+        //TEST
+        var data=new FormData();
+        data.append("name", document.getElementById("name").value);
+        var xhr=new XMLHttpRequest();
+        xhr.open("GET", "dummy.php");
+        xhr.onload=function() {
+          console.log("ajax loaded");
+        };
+        xhr.send("<SQL query>"+data);
+          console.log(xhr)
+        return false;
+      };
+      **/
+      
+    </script>
+  </head>
+  <body>
+    <div class="topBorder">
+      <p>
+        LD Tabroom Record Finder
+      </p>
+    </div>
+    
+    <div class="bottomBorder clear">
+      <h1 class="right-buffer">Contact me:</h1>
+      <div class="topOfBottomBanner">
+        <h2 class="right-buffer">Email: timothylin6@gmail.com</h2> 
+        
+        <h2 class="right-align"><a href="https://github.com/TimothyJLin/Tabroom-scraper">Code can be found here, on Github</a></h2>
+      </div>
+      <h2 class="leftAlign right-buffer"><a href="https://www.instagram.com/chancellorvarus">Instagram: @ChancellorVarus</a></h2>
+      
+      
+    </div>
+    
+    <h1>
+<!--
+  <form onsubmit=formSubmittedTest()>
+  -->
+      <form onsubmit="return ajaxcall()">
+        <div class="centeralign firstDiv">
+          <p>Search competitor by name</p>
+          <input type="text" id="name" class="textbox"></input>
+        </div>
+        <p class="centeralign">OR</p>
+        <div class="centeralign secondDiv">
+          <p>Search competitor by school</p>
+          <input type="text" id="name" class="textbox"></input>
+        </div>
+        
+        <div class="centeralign"><button class="bluebutton">Search user</button></div>
+        
+      </form>
+    </h1>
+  </body>
+  </html>

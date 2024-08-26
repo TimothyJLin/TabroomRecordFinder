@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+  }
+
+  .clear {
+    clear: both;
+  }
+  .firstDiv {
+    margin-top:3%;
+    margin-bottom:3%
+  }
+  
+  .secondDiv {
+    margin-top:3%;
+  }
+
+  .bluebutton {
+    background-color: rgb(26, 75, 165);
+    color: white;
+    margin-top: 4%;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  p {
+    text-align:center;
+    font: 40px;
+  }
+  
+  .right-buffer {
+    margin-right: 15px;
+    margin-bottom: 5px;
+  }
+
+  input {
+    height:20px;
+    text-align:center;
+    font-size:14pt;
+  }
+
+  .right-align {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 30px;
+  }
+
+  .left-align {
+    text-align: left;
+    
+  }
+
+
+  .centeralign {
+    text-align:center;
+    
+  }
+
+  .topOfBottomBanner {
+    display: flex;
+  }
+  
+  
+  .topBorder {
+    width: 100%;
+    height: 10%;
+    font-size: 50px;
+    background-color: CornflowerBlue;
+  }
+  
+  .bottomBorder {
+    margin:0px;  
+    padding: 0px 2px 2px 3px;    
+    height: 25%;
+    width: 100%;
+    background-color: CornflowerBlue;
+    position: absolute; bottom: 0
+  }
+
