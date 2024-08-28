@@ -1,3 +1,5 @@
+'''
+
 import mysql.connector
 mydb = mysql.connector.connect(
   host="mysql-project1-records-of-debaters.g.aivencloud.com",
@@ -16,3 +18,4 @@ myresult = mycursor.fetchall()
 for x in myresult:
   print(x)
 #print(mydb)
+'''
