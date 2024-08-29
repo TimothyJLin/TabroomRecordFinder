@@ -1,1 +1,1 @@
-print("ajax call successful!")
+return "ajax call successful!"
