@@ -8,7 +8,9 @@
     
     <script>
       function ajaxcall() {
-        var number = document.getElementById('numberInput').value;
+        var name=document.getElementById('name').value;
+        var school=document.getElementById('school').value;
+        alert(name);
       }
       /**
       function ajaxcall() {
@@ -96,12 +98,12 @@
       <form onsubmit="return ajaxcall()">
         <div class="centeralign firstDiv">
           <p>Search competitor by name</p>
-          <input type="text" id="name" class="textbox"></input>
+          <input type="text" id="name" class="textbox">
         </div>
         <p class="centeralign">OR</p>
         <div class="centeralign secondDiv">
           <p>Search competitor by school</p>
-          <input type="text" id="name" class="textbox"></input>
+          <input type="text" id="school" class="textbox">
         </div>
         
         <div class="centeralign"><button onclick="ajaxcall()" class="bluebutton">Search user</button></div>
