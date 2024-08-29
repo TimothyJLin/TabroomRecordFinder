@@ -1,0 +1,1 @@
+print("ajax call successful!")

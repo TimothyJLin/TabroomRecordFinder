@@ -14,12 +14,12 @@
         $.ajax({
         type: "GET",
         contentType: 'text/plain',
-        url: "./dummy.php",
+        url: "./print.py",
         dataType: "text", 
         //data: {test: '1'},
-        data: {name: "some variable", school: "some other variable"},
+        //data: {name: "some variable", school: "some other variable"},
         success: function(data){
-          window.alert(data);
+          windows.alert("success!");
           
           
           //          window.alert($('debaterInformation').text(data));
