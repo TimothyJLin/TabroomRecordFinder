@@ -8,6 +8,10 @@
     
     <script>
       function ajaxcall() {
+        var number = document.getElementById('numberInput').value;
+      }
+      /**
+      function ajaxcall() {
         
         
         console.log("ajax call successful"),
@@ -44,6 +48,7 @@
       
       
     }
+    **/
     //function formSubmittedTest() {
       // console.log("form submitted");
       //}
@@ -99,7 +104,7 @@
           <input type="text" id="name" class="textbox"></input>
         </div>
         
-        <div class="centeralign"><button class="bluebutton">Search user</button></div>
+        <div class="centeralign"><button onclick="ajaxcall()" class="bluebutton">Search user</button></div>
         
       </form>
 
