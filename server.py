@@ -7,12 +7,12 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-def printTest():
-  print("hello world from server.py")
-
-app.get("/test", (req, res) => {
-  res.send("hello world";
-})
+@app.route('/print.py', methods=['GET', 'POST'])
+def handle_request():
+    if request.method == 'GET':
+        # Handle GET requests
+        data = {'message': 'Hello from the GET endpoint'}
+        return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=True)
