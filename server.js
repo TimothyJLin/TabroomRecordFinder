@@ -16,7 +16,17 @@ app.get("/", function(request, response) {
   response.sendFile(__dirname + "/views/index.html");
 });
 
+app.get('/print.py', (req, res) => {
+  // Get complete list of users
+  const usersList = [];
+
+  // Send the usersList as a response to the client
+  res.send(usersList);
+});
+
 // listen for requests :)
 const listener = app.listen(process.env.PORT, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
+
+
