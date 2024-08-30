@@ -17,11 +17,7 @@ app.get("/", function(request, response) {
 });
 
 app.get('/print.py', (req, res) => {
-  // Get complete list of users
-  const usersList = [];
-
-  // Send the usersList as a response to the client
-  res.send(usersList);
+  print("file gotten");
 });
 
 // listen for requests :)
