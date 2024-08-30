@@ -8,7 +8,7 @@
     
     <script>
       function fetchData() {
-        fetch('/api/your-endpoint')
+        fetch('/print.py')
           .then(response => response.json())
           .then(data => {
             // Process the fetched data here
@@ -120,7 +120,7 @@
           <input type="text" id="school" class="textbox">
         </div>
         
-        <div class="centeralign"><button onclick="ajaxcall()" class="bluebutton">Search user</button></div>
+        <div class="centeralign"><button onclick="fetchData()" class="bluebutton">Search user</button></div>
         
       </form>
 
