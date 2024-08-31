@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-import sqlBackend.py
+import sqlBackend
 
 app = Flask(__name__)
 
@@ -17,6 +17,8 @@ def handle_request():
       data=request.args.get('inputData')
       name=data[0]
       school=data[1]
+      result=sqlBackend.findDebater(name, school)
+      return result
       
       
 if __name__ == '__main__':
