@@ -21,6 +21,14 @@
       
       async function ajaxcall() {
         var name=document.getElementById('name').value;
+        name.addEventListener("submit",   
+          (event) => {
+    // Prevent the default behavior of the form submission
+    event.preventDefault();
+
+    // Your code to handle the form submission here
+    // ...
+});
         var school=document.getElementById('school').value;
         var url="../print.py";
         var response=await fetch(url);
