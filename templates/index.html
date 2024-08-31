@@ -8,7 +8,7 @@
     
     <script>
       function fetchData() {
-        fetch('/print.py')
+        fetch('/sqlBackend.py')
           .then(response => response.json())
           .then(data => {
             // Process the fetched data here
@@ -19,14 +19,6 @@
           });
       }
       
-      async function ajaxcall() {
-        var name=document.getElementById('name').value;
-        var school=document.getElementById('school').value;
-   
-        var url="../print.py";
-        var response=await fetch(url);
-        alert(name);
-      }
       /**
       function ajaxcall() {
         
@@ -110,7 +102,7 @@
 
   
   
-      <form onsubmit="return ajaxcall()">
+      <form action="" onsubmit="return fetchData()">
         <div class="centeralign firstDiv">
           <p>Search competitor by name</p>
           <input type="text" id="name" action="" class="textbox">
