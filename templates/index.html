@@ -23,9 +23,9 @@
         var name=document.getElementById('name').value;
         var school=document.getElementById('school').value;
    
-        var url="../print.py";
+        var url="/print.py";
         var response=await fetch(url);
-        alert(name);
+        alert(response);
       }
       /**
       function ajaxcall() {
@@ -121,7 +121,7 @@
           <input type="text" id="school" action="" class="textbox">
         </div>
         
-        <div class="centeralign"><button onclick="fetchData()" action="" class="bluebutton">Search user</button></div>
+        <div class="centeralign"><button onclick="ajaxcall()" action="" class="bluebutton">Search user</button></div>
         
       </form>
 
