@@ -8,7 +8,7 @@
     
     <script>
       function fetchData() {
-        fetch('/sqlBackend.py')
+        fetch('/print.py')
           .then(response => response.json())
           .then(data => {
             // Process the fetched data here
@@ -102,7 +102,7 @@
 
   
   
-      <form action="" onsubmit="return fetchData()">
+      <form action="" onsubmit="fetchData()">
         <div class="centeralign firstDiv">
           <p>Search competitor by name</p>
           <input type="text" id="name" action="" class="textbox">
