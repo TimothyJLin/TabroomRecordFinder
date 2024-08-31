@@ -22,9 +22,12 @@
       async function ajaxcall() {
         var name=document.getElementById('name').value;
         var school=document.getElementById('school').value;
-   
+        var inputData=[name, school];
         var url="/print.py";
-        var response=await fetch(url);
+        var response=await fetch(url, {
+          method: 'POST',
+          body: inputData,
+          });
         alert(response);
       }
       /**
