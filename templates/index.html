@@ -29,6 +29,9 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(inputData),
           });
+        const data = await response.json(); // Parse the JSON response
+        console.log("successful "+data); // Log the data to the console (consider displaying it in the UI)
+    
         alert("test");
         alert(response);
       }
