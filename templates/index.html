@@ -22,11 +22,11 @@
       async function ajaxcall() {
         var name=document.getElementById('name').value;
         var school=document.getElementById('school').value;
-        var inputData={ name, school };
+        var inputData={'name': name, 'school': school};
         var url="/sqlBackend.py";
         var response=await fetch(url, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(inputData),
           });
         const data = await response.json(); // Parse the JSON response
