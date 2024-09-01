@@ -14,6 +14,7 @@ def handle_request():
         data = {'message': 'Hello from the GET endpoint'}
         return jsonify(data)
     if request.method == 'POST':
+      return jsonify("POST REQUEST RECIEVED STONKS")
       data=request.args.get('inputData')
       name=data[0]
       school=data[1]
