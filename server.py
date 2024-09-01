@@ -9,6 +9,7 @@ def home():
 
 @app.route('/sqlBackend.py', methods=['GET', 'POST'])
 def handle_request():
+    return "die"
     if request.method == 'GET':
         # Handle GET requests
         data = {'message': 'Hello from the GET endpoint'}
