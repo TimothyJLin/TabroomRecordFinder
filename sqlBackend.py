@@ -13,7 +13,7 @@ def findDebater(debateName, debateSchool):
   mycursor.execute("SELECT * FROM localentries WHERE name='shion lee'")
 
   myresult = mycursor.fetchall()
-  return myresult
+  return JSON.stringify(myresult)
   for x in myresult:
     print(x)
   #print(mydb)
