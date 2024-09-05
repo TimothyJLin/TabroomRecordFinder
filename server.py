@@ -18,7 +18,7 @@ def handle_request():
       if data is None:
         return jsonify({'error': 'Invalid JSON data'}), 400      
       #return jsonify("POST REQUEST RECIEVED STONKS")
-      data=request.args('inputData')
+      data=request.args['inputData']
       name=data['name']
       school=data['school']
       return jsonify("school: "+school)
