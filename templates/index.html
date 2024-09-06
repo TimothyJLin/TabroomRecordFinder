@@ -22,7 +22,10 @@
       async function ajaxcall() {
         var name=document.getElementById('name').value;
         var school=document.getElementById('school').value;
-        var inputData={'name': name, 'school': school};
+        var inputData = {
+          name: name.value, 
+          school: school.value
+        };
         var url="/sqlBackend.py";
         var response=await fetch(url, {
           method: 'POST',
