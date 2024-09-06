@@ -12,8 +12,10 @@ def handle_request():
   if request.method == 'POST':
     
     if request.is_json:
-      data = request.get() 
-      return data
+      return "fuck"
+      #data = request.get_json() 
+#      return jsonify({'screw you'})
+#      return jsonify(data['school'])
 
       if data is None:
         return jsonify({'error': 'Invalid JSON data'}), 400      
