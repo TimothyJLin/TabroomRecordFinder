@@ -12,7 +12,7 @@ def handle_request():
   if request.method == 'POST':
     
     if request.is_json:
-      return "fuck"
+      return jsonify('fuck')
       #data = request.get_json() 
 #      return jsonify({'screw you'})
 #      return jsonify(data['school'])
