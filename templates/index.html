@@ -20,8 +20,11 @@
         var response=await fetch(url, {
           method: 'POST',
           //headers: {'Content-Type': 'application/json'},
-          body: inputData,
-          });
+          body: JSON.stringify(inputData),
+          headers: new Headers({
+            "content-type": 'application/json'
+          })
+        });
         console.log(response)
         const data = await response.json(); // Parse the JSON response
         console.log("successful "+data); // Log the data to the console (consider displaying it in the UI)

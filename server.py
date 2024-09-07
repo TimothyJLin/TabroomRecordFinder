@@ -10,9 +10,10 @@ def home():
 @app.route('/sqlBackend.py', methods=['GET', 'POST'])
 def handle_request():
   if request.method == 'POST':
-    nameOfDebater=request.json['debaterName']
+    nameOfDebater=request.get_json()
+    print(nameOfDebater)
 
-    return nameOfDebater
+    return nameOfDebater['debaterName']
     #if request.is_json:
      # return jsonify('whats up')
       #data = request.get_json() 
