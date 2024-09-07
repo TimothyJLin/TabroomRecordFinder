@@ -15,7 +15,7 @@ def handle_request():
     debaterSchool=jsonify(debaterInfo['debaterSchool'])
 #return jsonify(debaterInfo['debaterName'])
     result=sqlBackend.findDebater("name", "school")
-    print("result: "+result)
+    print("result: "+str(result))
     return result
   else:
       return jsonify({'error': 'Unsupported method'}), 405 

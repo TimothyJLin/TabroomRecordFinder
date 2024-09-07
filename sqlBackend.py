@@ -14,9 +14,13 @@ def findDebater(debateName, debateSchool):
   mycursor.execute("SELECT * FROM localentries WHERE name='shion lee'")
 
   myresult = mycursor.fetchall()
-  print("went thru the gauntlet")
-  return "hi"
+  
+ #print("went thru the gauntlet")
+  print("string of tuple: "+myresult)
+  return myresult
 #  return JSON.stringify(myresult)
+
+#look at this for parsing information ideas
   for x in myresult:
     print(x)
   #print(mydb)
