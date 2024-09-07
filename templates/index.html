@@ -22,12 +22,12 @@
           //headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(inputData),
           headers: new Headers({
-            "content-type": 'application/json'
+            "content-type": "application/json"
           })
         });
-        console.log(response)
         const data = await response.json(); // Parse the JSON response
         console.log("successful "+data); // Log the data to the console (consider displaying it in the UI)
+        console.log("TRUE QUESTION "+data)
     
         alert("test");
         alert(response);
