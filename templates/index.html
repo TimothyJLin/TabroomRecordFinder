@@ -26,8 +26,9 @@
             "content-type": "application/json"
           })
         });
+        
         const data = await response.json(); // Parse the JSON response
-        console.log('Im so cool')
+        await console.log('Im so cool')
         
         console.log("successful "+data.toString()); // Log the data to the console (consider displaying it in the UI)
         
