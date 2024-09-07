@@ -10,16 +10,18 @@ def home():
 @app.route('/sqlBackend.py', methods=['GET', 'POST'])
 def handle_request():
   if request.method == 'POST':
-    
-    if request.is_json:
-      return jsonify('whats up')
+    debaterInfo=request.get_data()
+
+    return debaterInfo['debaterName']
+    #if request.is_json:
+     # return jsonify('whats up')
       #data = request.get_json() 
 #      return jsonify({'screw you'})
 #      return jsonify(data['school'])
-
-      if data is None:
-        return jsonify({'error': 'Invalid JSON data'}), 400      
-      #return jsonify("POST REQUEST RECIEVED STONKS")
+    
+    if data is None:
+      return jsonify({'error': 'Invalid JSON data'}), 400      
+    #return jsonify("POST REQUEST RECIEVED STONKS")
 
 
       #data=request.get['inputData']

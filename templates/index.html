@@ -19,8 +19,8 @@
         console.log("hi "+inputData['debaterName'])
         var response=await fetch(url, {
           method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(inputData),
+          //headers: {'Content-Type': 'application/json'},
+          body: inputData,
           });
         console.log(response)
         const data = await response.json(); // Parse the JSON response
