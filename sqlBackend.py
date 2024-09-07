@@ -1,5 +1,6 @@
 import mysql.connector
 def findDebater(debateName, debateSchool):
+  print("sqlbackend accessed!")
   mydb = mysql.connector.connect(
     host="mysql-project1-records-of-debaters.g.aivencloud.com",
     user="avnadmin",
@@ -13,7 +14,10 @@ def findDebater(debateName, debateSchool):
   mycursor.execute("SELECT * FROM localentries WHERE name='shion lee'")
 
   myresult = mycursor.fetchall()
-  return JSON.stringify(myresult)
+  print("went thru the gauntlet")
+  return "hi"
+#  return JSON.stringify(myresult)
   for x in myresult:
     print(x)
   #print(mydb)
+#findDebater("test", "run")
