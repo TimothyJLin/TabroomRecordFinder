@@ -16,7 +16,7 @@ def findDebater(debateName, debateSchool):
   myresult = mycursor.fetchall()
   
  #print("went thru the gauntlet")
-  print("string of tuple: "+myresult)
+  print("string of tuple: "+str(myresult))
   return myresult
 #  return JSON.stringify(myresult)
 

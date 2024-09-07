@@ -9,6 +9,7 @@
     <script>
       
       async function ajaxcall() {
+
         var name=document.getElementById('name').value;
         var school=document.getElementById('school').value;
         var inputData = {
@@ -26,8 +27,10 @@
           })
         });
         const data = await response.json(); // Parse the JSON response
-        console.log("successful "+data); // Log the data to the console (consider displaying it in the UI)
-        console.log("TRUE QUESTION "+data)
+        console.log('Im so cool')
+        
+        console.log("successful "+data.toString()); // Log the data to the console (consider displaying it in the UI)
+        
     
         alert("test");
         alert(response);
