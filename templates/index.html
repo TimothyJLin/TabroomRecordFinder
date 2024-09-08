@@ -18,6 +18,8 @@
         };
         var url="/sqlBackend.py";
         console.log("hi "+inputData['debaterName'])
+
+
         var response=await fetch(url, {
           method: 'POST',
           //headers: {'Content-Type': 'application/json'},
@@ -27,14 +29,14 @@
           })
         });
         
-        const data = await response.json(); // Parse the JSON response
-        await console.log('Im so cool')
+        ajaxcall().then((data)=> {
+          console.log('Im so cool')
+        });
         
         console.log("successful "+data.toString()); // Log the data to the console (consider displaying it in the UI)
         
     
-        alert("test");
-        alert(response);
+        
       }
       /**
       function ajaxcall() {
