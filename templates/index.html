@@ -8,7 +8,7 @@
     
     <script>
       
-      function ajaxcall() {
+      async function ajaxcall() {
 
         var name=document.getElementById('name').value;
         var school=document.getElementById('school').value;
@@ -17,33 +17,16 @@
           debaterSchool: school
         };
         var url="/sqlBackend.py";
-        console.log("hi "z+inputData['debaterName'])
+        console.log("hi "+inputData['debaterName'])
 
 
-        response=fetch(url, {
+        var response=fetch(url, {
           method: 'POST',
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
         });
-         //.then(response => response.json()) // Parse the JSON response
-    .then(data => {
-      if (Array.isArray(data)) {
-        console.log("YA BOI IS AN ARRAY");
-        console.log(data[0]); // Access the first element of the array
-      } else {
-        console.log("response is not an array");
-      }
-    })
-    .catch(error => {
-      console.error("Error:", error);
-    });
-       /**
-        if (Array.isArray(response)) {
-          console.log("YA BOI IS AN ARRAY");
-        }
-        console.log(typeof(response));
+        console.log(typeof(response))
         console.log("response "+response[0]);
-        **/
       }      
     </script>
   </head>
