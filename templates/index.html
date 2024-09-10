@@ -25,9 +25,10 @@
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
         });
-        console.log(Object.keys(response));
-        console.log(typeof(response));
-        console.log("response "+response[0]);
+        var parsedResponse=JSON.parse(parsedResponse);
+        console.log(Object.keys(parsedResponse));
+        console.log(typeof(parsedResponse));
+        console.log("response "+parsedResponse[0]);
       }      
     </script>
   </head>
