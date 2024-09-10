@@ -20,7 +20,8 @@
         console.log("hi "+inputData['debaterName'])
 
 
-        var response=await fetch(url, {
+        /**
+                var response=await fetch(url, {
           method: 'POST',
           //headers: {'Content-Type': 'application/json'},
           body: JSON.stringify(inputData),
@@ -28,7 +29,12 @@
             "content-type": "application/json"
           })
         });
-        alert("DRAGON FIRE")
+        **/
+        var response=await fetch(url, {
+        method: 'POST'                         
+                                 });
+        console.log("response"+response.json());
+        alert("DRAGON FIRE");
         console.log("response "+response.toString());
         /**
         .then((data)=> {
