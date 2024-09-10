@@ -25,7 +25,8 @@
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
         });
-        console.log(typeof(response))
+        console.log(Object.keys(response));
+        console.log(typeof(response));
         console.log("response "+response[0]);
       }      
     </script>
