@@ -15,11 +15,12 @@ def findDebater(debateName, debateSchool):
 
   myresult = mycursor.fetchall()
   debaterArray=[]
+
   for element in myresult[0]:
     debaterArray.append(element)
- #print("went thru the gauntlet")
-  print("string of array: "+debaterArray)
-  return debaterArray
+  print("string of array: "+str(debaterArray))
+  return myresult[0]
+#  return debaterArray
 #  return JSON.stringify(myresult)
 
 #look at this for parsing information ideas
