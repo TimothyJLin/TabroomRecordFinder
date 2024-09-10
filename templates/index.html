@@ -20,93 +20,14 @@
         console.log("hi "+inputData['debaterName'])
 
 
-        /**
-                var response=await fetch(url, {
-          method: 'POST',
-          //headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify(inputData),
-          headers: new Headers({
-            "content-type": "application/json"
-          })
-        });
-        **/
-        var response=await fetch(url, {
+        var response=fetch(url, {
         method: 'POST',
         body: JSON.stringify(inputData),
         headers: {'Content-Type': 'application/json'},
                                  });
-        console.log("response"+response.json());
-        alert("DRAGON FIRE");
-        console.log("response "+response.toString());
-        /**
-        .then((data)=> {
-          alert("hello dragonman")
-          console.log('Im so cool')
-        });
-        **/
-        console.log("successful "+data.toString()); // Log the data to the console (consider displaying it in the UI)
-        
-    
-        
-      }
-      /**
-      function ajaxcall() {
-        
-        
-        console.log("ajax call successful"),
-        $.ajax({
-        type: "POST",
-        //contentType: 'text/plain',
-        url: "../print.py",
-        dataType: "html", 
-        //data: {test: '1'},
-        //data: {name: "some variable", school: "some other variable"},
-        success: function(data){
-          windows.alert("success!");
-          
-          
-          //          window.alert($('debaterInformation').text(data));
-          
-          //          console.log("inside success function");
-          //          console.log(data);
-          //var response = JSON.parse(data); // Parse the received JSON data
-          //var name = response.name;
-          //var school = response.school;
-          //var url = response.url;
-          
-          
-          //          var name = debaterInformation.name;
-          //        var school = debaterInformation.school;
-          //      var url = debaterInformation.url;
-          //    console.log("BREAD SECURED");
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          console.error("AJAX Error:", textStatus, errorThrown); // Log details for debugging
-        }
-      });      
-      
-      
-    }
-    **/
-    //function formSubmittedTest() {
-      // console.log("form submitted");
-      //}
-      /**
-      function ajaxcall() {
-        //TEST
-        var data=new FormData();
-        data.append("name", document.getElementById("name").value);
-        var xhr=new XMLHttpRequest();
-        xhr.open("GET", "dummy.php");
-        xhr.onload=function() {
-          console.log("ajax loaded");
-        };
-        xhr.send("<SQL query>"+data);
-          console.log(xhr)
-        return false;
-      };
-      **/
-      
+
+        console.log("response "+response[0]);
+      }      
     </script>
   </head>
   <body>
