@@ -25,7 +25,10 @@
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
         });
-        console.log(typeof(response))
+        if (Array.isArray(response)) {
+          console.log("YA BOI IS AN ARRAY");
+        }
+        console.log(typeof(response));
         console.log("response "+response[0]);
       }      
     </script>
