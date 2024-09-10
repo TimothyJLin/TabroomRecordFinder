@@ -14,10 +14,12 @@ def findDebater(debateName, debateSchool):
   mycursor.execute("SELECT * FROM localentries WHERE name='shion lee'")
 
   myresult = mycursor.fetchall()
-  
+  debaterArray=[]
+  for element in myresult[0]:
+    debaterArray.append(element)
  #print("went thru the gauntlet")
-  print("string of tuple: "+str(myresult))
-  return myresult
+  print("string of array: "+debaterArray)
+  return debaterArray
 #  return JSON.stringify(myresult)
 
 #look at this for parsing information ideas
