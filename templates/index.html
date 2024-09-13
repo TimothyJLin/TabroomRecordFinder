@@ -25,7 +25,7 @@
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
         });
-        var parsedResponse=JSON.parse(parsedResponse);
+        var parsedResponse=JSON.parse(response);
         console.log(Object.keys(parsedResponse));
         console.log(typeof(parsedResponse));
         console.log("response "+parsedResponse[0]);
