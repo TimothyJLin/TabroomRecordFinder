@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+import json
 import sqlBackend
 
 app = Flask(__name__)
@@ -16,9 +17,10 @@ def handle_request():
 #return jsonify(debaterInfo['debaterName'])
     debaterArray=sqlBackend.findDebater("name", "school")
     print("result: "+str(debaterArray))
-    print("dragon fire")
+    
     jsonDumps=json.dumps(debaterArray)
-    print(jsonDumps)
+    print("dragon fire")
+    print(jsonDumps+" json dump")
     
     return jsonDumps
   else:
