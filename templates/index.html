@@ -26,8 +26,11 @@
           headers: {'Content-Type': 'application/json'},
         });
         
-        var parsedResponse=JSON.parse(response[0]);
-        console.log(parsedResponse);
+        var parsedResponse=Promise.resolve(response);
+        parsedResponse.then((value)=>{
+        console.log(parsedResponse);  
+        })
+        console.log("finished?");
       }
     </script>
   </head>
