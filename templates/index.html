@@ -25,11 +25,14 @@
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
         })
+/*
         .then(
           let myPromise = Promise.resolve(response);
-        
+          myPromise.then(x => response, x => response);
+        )
 
         );
+        */
       }
     </script>
   </head>
