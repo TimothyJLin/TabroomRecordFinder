@@ -25,7 +25,7 @@
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
         })
-        .then(response => response.json());
+        .then(response => response.data);
         
         console.log(response+" response text")
       }
