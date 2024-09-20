@@ -24,13 +24,12 @@
           method: 'POST',
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
-        }) 
-        response.then
-        createPromise.then((promisedata) => {
-    console.log("Promise is resolved successfully", promisedata)
-})
+        })
+        .then((responseData) => {
+          console.log("This is the response.", responseData)
+        });
+      }
         
-        JSON.parse(response)
 /*      
         .then(
           let myPromise = Promise.resolve(response);
@@ -38,11 +37,12 @@
         )
 
         );
-        */
         function extractPromiseToJSON(jsonPromise) {
           jsonPromise.
         }
-      }
+        */
+        
+      
     </script>
   </head>
   <body>
