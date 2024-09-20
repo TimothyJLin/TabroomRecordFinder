@@ -19,7 +19,7 @@ def findDebater(debateName, debateSchool):
   for element in myresult[0]:
     debaterArray.append(str(element))
   print("string of array: "+str(debaterArray))
-  return json.dumps(debaterArray)
+  return debaterArray
 #  return debaterArray
 #  return JSON.stringify(myresult)
 

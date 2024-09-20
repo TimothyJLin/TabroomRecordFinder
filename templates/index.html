@@ -24,25 +24,11 @@
           method: 'POST',
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
-        })
-        .then((responseData) => {
-          console.log("This is the response.", responseData)
         });
-      }
         
-/*      
-        .then(
-          let myPromise = Promise.resolve(response);
-          myPromise.then(x => response, x => response);
-        )
-
-        );
-        function extractPromiseToJSON(jsonPromise) {
-          jsonPromise.
-        }
-        */
-        
-      
+        var parsedResponse=JSON.parse(response[0]);
+        console.log(parsedResponse);
+      }      
     </script>
   </head>
   <body>
