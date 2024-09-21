@@ -20,13 +20,14 @@
         console.log("hi "+inputData['debaterName'])
 
 
-        var response=fetch(url, {
+        const response=fetch(url, {
           method: 'POST',
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
         })
-        .then(response => {
-          console.log(response)
+        
+        .then((fetchedPromise=>fetchedPromise.text()) => {
+          console.log(fetchedPromise);
         });
         
 //        var parsedResponse=JSON.parse(response[0]);
