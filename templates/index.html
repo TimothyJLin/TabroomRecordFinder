@@ -24,9 +24,10 @@
           method: 'POST',
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
-        }) 
-        .then((fetchedPromise) => {
-          console.log("why doesn't this work ", fetchedPromise);
+        })
+        .then(fetchedPromise => {
+          console.log("hello?")
+          //console.log("why doesn't this work ", fetchedPromise);
         });
         
 //        var parsedResponse=JSON.parse(response[0]);
