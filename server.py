@@ -21,8 +21,9 @@ def handle_request():
     jsonDumps=json.dumps(debaterArray)
     print("dragon fire")
     print(jsonDumps+" json dump")
-    return "test string; see if returning array is the problem"
-    return jsonDumps
+    testString="test string; see if returning array is the problem"
+    return testString.json()
+    #return jsonDumps
   
   else:
       return jsonify({'error': 'Unsupported method'}), 405 
