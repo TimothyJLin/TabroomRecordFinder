@@ -25,11 +25,11 @@
           body: JSON.stringify(inputData),
           headers: {'Content-Type': 'application/json'},
         })
-        .then(fetchedPromise => {
-          console.log("hello?")
-          //console.log("why doesn't this work ", fetchedPromise);
-        });
-        
+        .then(response => response.json()) // Assuming JSON response
+        .then(json => {
+            console.log("hello?", json);
+        })
+        .catch (err=>console.log(err.message));
 //        var parsedResponse=JSON.parse(response[0]);
         
       }      
