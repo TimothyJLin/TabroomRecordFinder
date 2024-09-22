@@ -11,7 +11,9 @@ def home():
 @app.route('/sqlBackend.py', methods=['GET', 'POST'])
 def handle_request():
   if request.method == 'POST':
+    
     debaterInfo=request.get_json()
+
     debaterName=jsonify(debaterInfo['debaterName'])
     debaterSchool=jsonify(debaterInfo['debaterSchool'])
 #return jsonify(debaterInfo['debaterName'])
