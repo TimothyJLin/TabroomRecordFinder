@@ -11,7 +11,7 @@ def findDebater(debateName, debateSchool):
   )
   mycursor = mydb.cursor()
 
-  mycursor.execute("SELECT * FROM localentries WHERE name='shion lee'")
+  mycursor.execute("SELECT * FROM localentries WHERE name='nikhil satyagal'")
 
   myresult = mycursor.fetchall()
   debaterArray=[]
