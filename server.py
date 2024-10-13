@@ -10,7 +10,7 @@ def home():
 
 @app.route('/sqlBackend.py', methods=['GET', 'POST'])
 def handle_request():
-  if request.method == 'POST':
+  if request.method == 'POST' or request.method == 'GET':
     
     debaterInfo=request.get_json()
 
