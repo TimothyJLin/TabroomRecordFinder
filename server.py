@@ -24,7 +24,7 @@ def handle_request():
     print("dragon fire")
     print(jsonDumps+" json dump")
     testString="test string; see if returning array is the problem"
-    return testString.json()
+    return jsonDumps
     #return jsonDumps
   
   else:
